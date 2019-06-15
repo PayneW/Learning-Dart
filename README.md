@@ -25,7 +25,6 @@
 
 
 
-
 - **effective /ɪ'fektɪv/** adj.有效的，起作用的
     + --> These are effective measures. 这些都是有效的措施。
     + --> This is an effective medium. 这是一种有效手段。
@@ -34,7 +33,10 @@
 # Dart 文档官网提示是建议 2 个空格，但自己的习惯是和 javascript 代码保持一致使用 4 个空格。
 - **effective /ɪ'fektɪv/ ~~~adj.有效的，生效的，事实上的**
     + --> These are effective measures. 这些都是有效的措施。
+    
+    
 ## [Effective Dart: 代码风格](http://dart.goodev.org/guides/language/effective-dart/style#uppercamelcase-)
+
 - **标识符**: 所谓标识符，就是指变量、函数、属性的名字，或者函数的参数. (此句来自《js高程》)。
     + UpperCamelCase: 大驼峰式
         - Classes           (类名字)

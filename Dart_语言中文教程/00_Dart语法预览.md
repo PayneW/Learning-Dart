@@ -1,0 +1,90 @@
+# [Dart语法预览](http://dart.goodev.org/guides/language/language-tour)
+
+## Dart 应用中的特性
+- ```dart
+      // num : 一个类型。 String、int、bool 是另外几种类型。
+      num five = 5;
+      
+      // const: 定义常量
+      const fortyTwo = 42;
+      
+      // print 一种打印内容的助手方法
+      print();
+    
+      // 字符串插值: 在字符串字面量中引用变量或者表达式。
+      // $variableName / ${expression}
+      
+      // Dart 程序执行的入口方法，每个程序都需要一个这样的方法。
+      main(){}
+      
+      // var: 一种不指定类型声明变量的方式。
+      var name = "Wang"; 
+  ```
+
+
+## 重要概念 (Important concepts): 
+> 在学习 Dart 语言之前，请牢记下面一些事实和概念:
+- 所有能够使用变量引用的都是对象，每个对象都是一个类的实例。
+    + 在 Dart 中甚至连 数字、方法 和 null 都是对象。
+    + 所有的对象都继承于 Object 类
+- 尽管 Dart 是强类型的，但是 Dart 支持类型推断所以类型声明式可选的。(调试代码时没有指定类型
+  的变量的类型为 dynamic.)
+- Dart 中的类和接口是统一的，类即接口，你可以继承一个类，也可以实现一个类(接口)，自然包含良好
+    的面向对象和并发编程的支持。
+- Dart 中的函数:
+    + 支持顶级函数 (例如 main(): 应用开始执行的特定的、必须的、顶级的函数。)
+    + 支持在类中定义函数，如静态函数和实例函数
+        ```dart
+            class A {
+                // 一个静态函数
+                static void bar() {}
+                
+                // 一个实例方法
+                void baz() {}
+            }
+        ```
+    + 还可以在方法中定义方法 (嵌套方法或者局部方法)
+- Dart 也支持顶级变量，以及在类中定义变量(静态变量和实例变量)。实例变量有时候被称为 
+   域(Fields) 或者属性 (Properties)。
+- 和 Java 不同的式，Dart 没有 public, protected 和 private 关键字. 如果一个标识符以 
+   (_) 开头，则该标识符在库内时私有的。详情请参考: 库和可见性。
+- 标识符可以字母或 (_) 开始，后面可以是 其他字符和数字的组合。
+- 有时候 表达式(expression) 和 语句(statement) 是有区别的，所以这种情况我们会分别指明
+   每种情况。
+
+
+## 关键词
+下面的表格列出了 Dart 语言特殊对待的关键词。
+
+| [abstract](https://www.dartlang.org/guides/language/language-tour#abstract-classes) <sup>2</sup> | [dynamic](https://www.dartlang.org/guides/language/language-tour#important-concepts) <sup>2</sup> | [implements](https://www.dartlang.org/guides/language/language-tour#implicit-interfaces) <sup>2</sup> | [show](https://www.dartlang.org/guides/language/language-tour#importing-only-part-of-a-library) <sup>1</sup> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [as](https://www.dartlang.org/guides/language/language-tour#type-test-operators) <sup>2</sup> | [else](https://www.dartlang.org/guides/language/language-tour#if-and-else) | [import](https://www.dartlang.org/guides/language/language-tour#using-libraries) <sup>2</sup> | [static](https://www.dartlang.org/guides/language/language-tour#class-variables-and-methods) 2 |
+| [assert](https://www.dartlang.org/guides/language/language-tour#assert) | [enum](https://www.dartlang.org/guides/language/language-tour#enumerated-types) | [in](https://www.dartlang.org/guides/language/language-tour#for-loops) | [super](https://www.dartlang.org/guides/language/language-tour#extending-a-class) |
+| [async](https://www.dartlang.org/guides/language/language-tour#asynchrony-support) <sup>1</sup> | [export](https://www.dartlang.org/guides/libraries/create-library-packages) <sup>2</sup> | [interface](https://stackoverflow.com/questions/28595501/was-the-interface-keyword-removed-from-dart) <sup>2</sup> | [switch](https://www.dartlang.org/guides/language/language-tour#switch-and-case) |
+| [await](https://www.dartlang.org/guides/language/language-tour#asynchrony-support) <sup>3</sup> | [extends](https://www.dartlang.org/guides/language/language-tour#extending-a-class) | [is](https://www.dartlang.org/guides/language/language-tour#type-test-operators) | [sync](https://www.dartlang.org/guides/language/language-tour#generators) <sup>1</sup> |
+| [break](https://www.dartlang.org/guides/language/language-tour#break-and-continue) | [external](https://stackoverflow.com/questions/24929659/what-does-external-mean-in-dart) <sup>2</sup> | [library](https://www.dartlang.org/guides/language/language-tour#libraries-and-visibility) <sup>2</sup> | [this](https://www.dartlang.org/guides/language/language-tour#constructors) |
+| [case](https://www.dartlang.org/guides/language/language-tour#switch-and-case) | [factory](https://www.dartlang.org/guides/language/language-tour#factory-constructors) <sup>2</sup> | [mixin](https://www.dartlang.org/guides/language/language-tour#adding-features-to-a-class-mixins) <sup>2</sup> | [throw](https://www.dartlang.org/guides/language/language-tour#throw) |
+| [catch](https://www.dartlang.org/guides/language/language-tour#catch) | [false](https://www.dartlang.org/guides/language/language-tour#booleans) | [new](https://www.dartlang.org/guides/language/language-tour#using-constructors) | [true](https://www.dartlang.org/guides/language/language-tour#booleans) |
+| [class](https://www.dartlang.org/guides/language/language-tour#instance-variables) | [final](https://www.dartlang.org/guides/language/language-tour#final-and-const) | [null](https://www.dartlang.org/guides/language/language-tour#default-value) | [try](https://www.dartlang.org/guides/language/language-tour#catch) |
+| [const](https://www.dartlang.org/guides/language/language-tour#final-and-const) | [finally](https://www.dartlang.org/guides/language/language-tour#finally) | [on](https://www.dartlang.org/guides/language/language-tour#catch) <sup>1</sup> | [typedef](https://www.dartlang.org/guides/language/language-tour#typedefs) <sup>2</sup> |
+| [continue](https://www.dartlang.org/guides/language/language-tour#break-and-continue) | [for](https://www.dartlang.org/guides/language/language-tour#for-loops) | [operator](https://www.dartlang.org/guides/language/language-tour#overridable-operators) <sup>2</sup> | [var](https://www.dartlang.org/guides/language/language-tour#variables) |
+| [covariant](https://www.dartlang.org/guides/language/sound-problems#the-covariant-keyword) <sup>2</sup> | [Function](https://www.dartlang.org/guides/language/language-tour#functions) <sup>2</sup> | [part](https://www.dartlang.org/guides/libraries/create-library-packages#organizing-a-library-package) <sup>2</sup> | [void](https://medium.com/dartlang/dart-2-legacy-of-the-void-e7afb5f44df0) |
+| [default](https://www.dartlang.org/guides/language/language-tour#switch-and-case) | [get](https://www.dartlang.org/guides/language/language-tour#getters-and-setters) <sup>2</sup> | [rethrow](https://www.dartlang.org/guides/language/language-tour#catch) | [while](https://www.dartlang.org/guides/language/language-tour#while-and-do-while) |
+| [deferred](https://www.dartlang.org/guides/language/language-tour#lazily-loading-a-library) <sup>2</sup> | [hide](https://www.dartlang.org/guides/language/language-tour#importing-only-part-of-a-library) <sup>1</sup> | [return](https://www.dartlang.org/guides/language/language-tour#functions) | [with](https://www.dartlang.org/guides/language/language-tour#adding-features-to-a-class-mixins) |
+| [do](https://www.dartlang.org/guides/language/language-tour#while-and-do-while) | [if](https://www.dartlang.org/guides/language/language-tour#if-and-else) | [set](https://www.dartlang.org/guides/language/language-tour#getters-and-setters) <sup>2</sup> | [yield](https://www.dartlang.org/guides/language/language-tour#generators) <sup>3</sup> |
+
+避免使用这些单词作为标识符。然而，如果必要，带角标的关键词可以作为标识符：
+
+* 带角标 *1* 的是 **上下文关键词**，它们只在特定的地方有有意义。除此之外他们在所有地方都是合法的关键词。
+* 带角标 *2* 的是 **内置标识符**。为了简化将JavaScript代码移植到Dart的任务，这些关键字在大多数地方都是有效的标识符，但它们不能用作类或类型名称，也不能用作导入前缀。
+* 带角标 *3* 的是新的，与 [异步支持](# 异步支持) 相关的限制性关键词，在 Dart 1.0 发布后才被加入。在以 **async**、**async\*** 或 **yield** 标识的函数体中，你不能使用 **async**、**await** 或者 **yield** 作为标识符。
+
+
+
+### 注释:
+- Dart 的注释分 3 种: 单行注释、多行注释、文档注释。
+    + 单行注释: `// comment`       
+    + 多行行注释: `/* comments */`       
+    + 文档注释注释: `///` 或者 `/** */`
+
+### 分号: 在 Dart 中， 用分号来结束语句是必须的，不加分号会报错；使用分号的另一个用处是在一行中编写多条语句
