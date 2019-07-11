@@ -21,9 +21,8 @@ void main() {
 abstract class Person {
 
     // 抽象方法不用 abstract 修饰，无实现
-    void run();
     // 抽象类可以没有抽象方法，如果有的话就是这样
-    // void run() {}
+    void run();  // 或者: void run() {}
 }
 
 // 抽象类需要使用继承得形式，让子类来实例化

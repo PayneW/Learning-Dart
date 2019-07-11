@@ -7,8 +7,9 @@
 - Windows 平台有 2 种方式:
     - 1、[利用 chocolatey 安装:](http://dart.goodev.org/install/windows#chocolatey)
         + 安装 Chocolatey
-            - A)、以 "管理员" 身份运行 Run 窗口: 首先用 `win + R` 快捷键打开 "Run" 窗口，然后输入 `cmd` 接着按下
-                        Ctrl + Shift + Enter 就是以管理员身份运行了。(tips: 注意左上角会有"管理员"字体提示，来源: `https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/`)
+            - A)、以 "管理员" 身份运行 Run 窗口: 首先用 `win + R` 快捷键打开 "Run" 窗口，
+                然后输入 `cmd` 接着按下 Ctrl + Shift + Enter 就是以管理员身份运行了。
+                (tips: 注意左上角会有"管理员"字体提示，来源: `https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/`)
             - B)、在上面以管理员身份打开的 Run 窗口中粘贴段代码运行:
                 + `@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"`
                 + 安装完毕输入: choco -v 就可以查看版本号是否安装成功了。

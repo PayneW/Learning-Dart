@@ -1,6 +1,8 @@
 /**
- * 数据类型 Number:
- *
+ * - 数据类型 Number:
+ *   + num
+ *   + int
+ *   + double
  */
 
 void main() {
@@ -29,7 +31,7 @@ void main() {
 
     print(b.isEven);
 
-    // odd /ɒd/ adj.奇数的
+    // - odd [ɒd/] adj.奇数的
     print(b.isOdd);
 
     int d = 11;

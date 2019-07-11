@@ -17,4 +17,14 @@ void main() {
      if (isFalse) {
           print("isFalse false");
      }
+
+     // - assert 断言
+     var a = true;
+     assert(a);
+
+     // 只有 true 对象才被人为是 true. 所有其他的值都是 false.
+     String name = 'puppy';
+     // if (name) {
+     //      print('this is a dog');
+     // }
 }

@@ -22,6 +22,38 @@
  *
  */
 
+
+// String(返回值类型)，参数类型(String, int) 都是可以省略的
+String getPerson(String name, int age) {
+    return  'name = $name, age= $age';
+}
+
+
+// 箭头语法 + 三目运算符
+int gender = 1;
+printPerson(name, age) => gender == 1 ? print("name= $name, age = $age") : "Test";
+
+
+
+// 可选命名参数:
+optionalParam(String name, {int age, String gender}) {
+    print("name = $name, age = $age, gender = $gender");
+}
+// 可选位置参数:
+optionalParam2(String name, [int age=2, String gender]) {
+    print("name = $name, age = $age, gender = $gender");
+}
+
+
+// 可选参数的默认值
+defaultPara(String name, {int age:30, String gender:'Female'}) {
+    print("Default Parameters name = $name, age = $age, gender = $gender");
+}
+
+
+// 方法对象
+
+
 // void 表示不需要返回类型
 void main(List args) {
     // 此处打印 args 只是说明: Dart 中函数总是有一个形参列表 list (js 中函数的参数为数组)
@@ -51,32 +83,4 @@ void main(List args) {
     defaultPara('小刚', age: 24, gender: 'Male');
 }
 
-
-// String(返回值类型)，参数类型(String, int) 都是可以省略的
-String getPerson(String name, int age) {
-    return  'name = $name, age= $age';
-}
-
-
-// 箭头语法 + 三目运算符
-int gender = 1;
-printPerson(name, age) => gender == 1 ? print("name= $name, age = $age") : "Test";
-
-
-// 可选命名参数:
-optionalParam(String name, {int age, String gender}) {
-    print("name = $name, age = $age, gender = $gender");
-}
-// 可选位置参数:
-optionalParam2(String name, [int age=2, String gender]) {
-    print("name = $name, age = $age, gender = $gender");
-}
-
-
-// 可选参数的默认值 
-defaultPara(String name, {int age:30, String gender:'Female'}) {
-    print("Default Parameters name = $name, age = $age, gender = $gender");
-}
-
-// 方法对象
 
