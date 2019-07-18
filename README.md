@@ -23,7 +23,8 @@
         + 在 webstorm 中加载 dart-sdk 的路径: C:\tools\dart-sdk
     - 2、[下载安装包直接安装](http://www.gekorm.com/dart-windows/) 建议使用 chocolatey 安装，
         因为这种方法在安装时要联网下载，总是不成功。
-
+- Mac 平台安装方式：
+    - 1、首先安装 Homebrew，然后使用 Homebrew 安装 Dart
 
 
 - **effective /ɪ'fektɪv/** adj.有效的，起作用的
@@ -41,7 +42,8 @@
 - **标识符**: 所谓标识符，就是指变量、函数、属性的名字，或者函数的参数. (此句来自《js高程》)。
     + UpperCamelCase: 大驼峰式
         - Classes           (类名字)
-        - enums             (枚举类型) [- enumerable /ɪ'njuːm(ə)rəb(ə)l/ adj.可枚举的，可列举的]
+        - enums             (枚举类型) 
+            + [- enumerable /ɪ'njuːm(ə)rəb(ə)l/ adj.可枚举的，可列举的]
         - typedefs          (类型定义)
         - type parameters   (类型参数)
 

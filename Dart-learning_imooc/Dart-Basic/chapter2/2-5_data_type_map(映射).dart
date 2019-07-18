@@ -29,6 +29,11 @@ void main() {
     print("*" * 79);
     print('\n');
 
+    //《Dart编程语言》 P116
+    var map02 = <String, int>{'a': 1, 'b': 2, 'c': 3};
+    print('map02: ${map02}');
+
+
     // 来源: https://caelumtian.github.io/2018/09/10/%E4%BB%8Ejs%E8%A7%92%E5%BA%A6%E7%9C%8Bdart/
     // Map 通常被称为 dictionary (字典) 或者 hash, map 是一个无序的 key-value (键-值) 对
     // map 中每个值都有一个对应的键便于访问。和 JavaScript 不同 Dart 对象不是 map.

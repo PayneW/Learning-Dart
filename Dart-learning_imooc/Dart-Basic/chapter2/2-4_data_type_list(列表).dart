@@ -94,6 +94,7 @@ void main() {
     arr1.add(5);
     // 添加一个数组
     arr1.addAll([10, 12]);
+    print('arr1: ' + arr1.toString());
 
     var arr2 = ['one', 'two', 'three', 'four', 'five', 'six'];
 
