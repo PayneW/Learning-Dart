@@ -21,4 +21,47 @@ class AClass<T> {
     // print(anInstanceVariable); // error
   }
 
+  aMethod(aParameter) {
+    var aLocal = 5;
+    var anUnassignedLocal;
+    var shadowed = 6; // shadows static variable
+    localFunction(x) => 7;
+    {
+      var moreLocal = 8;
+      var shadowed = 9; // shadows local
+      moreLocalFunction(y) {
+        return moreLocal;
+      }
+      print("global: ${global}");
+      print("shadowed: ${shadowed}");
+      print("aFunction: ${aFunction}");
+      print("AnotherClass: ${AnotherClass}");
+      print("F: ${F}");
+      print("AClass: ${AClass}");
+      print("T: ${T}");
+      print("aClassVariable: ${aClassVariable}");
+      print("anInstanceVariable: ${anInstanceVariable}");
+      print("aMethod: ${aMethod}");
+      print("anotherMethod: ${anotherMethod}");
+      print("aParameter: ${aParameter}");
+      print("localFunction: ${localFunction}");
+      print("aLocal ${aLocal}");
+      print("anUnassignedLocal: ${anUnassignedLocal}");
+      print("moreLocal ${moreLocal}");
+      print("moreLocalFunction: ${moreLocalFunction}");
+    }
+    print("shadowed ${shadowed}");
+  }
+
+  anotherMethod() => 10;
 }
+
+class AnotherClass{}
+
+typedef int F(int x);
+
+
+
+
+
+
