@@ -29,13 +29,3 @@ main() {
     print(stack2.pop);
     print(stack2.top);
 }
-
-
-/** 3.5 将库拆分为 part : 见书本 */
-
-/** 3.6 导出 */
-
-/** 3.7 钻石导入 */
-
-/** 3.8 延迟加载: 见书本 */
-// import 'stack1.dart' deferred as stack1;
