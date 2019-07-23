@@ -215,15 +215,25 @@
 
 
 ### 词法作用域
-- Dart 是词法作用域语言，这意味着变量的作用域是静态确定的，简单地通过代码的布局来确定你可以 
+- Dart 是词法作用域语言，这意味着变量的作用域是静态确定的，简单地通过代码的布局来确定。你可以 
   "沿着花括号往外走" 来判断一个变量是否在作用域中。
 ```dart
+    // 下面是一个嵌套函数的例子，它包含了各个层级的作用域中的变量：
     bool topLevel = true;
     void main() {
       var insideMain = true;
       
-      
-      
+      void myFunction() {
+        var insideFunction = true;
+        
+        void nestedFunction() {
+          var insideNestedFunction = true;
+          print("topLevel $topLevel");
+          print("insideMain $insideMain");
+          print("insideFunction $insideFunction");
+          print("insideNestedFunction $insideNestedFunction"); 
+        }
+      }
     }
 ```
 
