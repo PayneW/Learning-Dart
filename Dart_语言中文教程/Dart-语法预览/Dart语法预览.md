@@ -1,5 +1,6 @@
-# [Dart语法预览，最后确定用 github 这个翻译](https://github.com/konieshadow/dart-tour#%E5%87%BD%E6%95%B0)
+# [Dart语法预览，最后确定用 github 这个翻译](https://github.com/konieshadow/dart-tour)
 - 实际上看的时候是和官网的文档结合看的。
+
 
 ### 在学习 Dart 语言之前，请牢记下面一些事实和概念(重要概念 Important concepts):
 - (1)、所有能够使用变量引用的都是对象，每个对象都是一个类的实例。每一个数值、函数和 null 
@@ -240,4 +241,21 @@
 
 ### 词法闭包
 - "闭包" 指可以访问词法作用域中变量的一个函数对象，即使这个函数是在它原本作用域的外部被使用的。
+- 函数可以捕获定义在它周围作用域中的变量。在下面的例子中， makeAdder() 捕获了变量 addBy. 
+  无论返回的函数到哪儿，它都记得 addBy。
+```dart
+    // 返回一个函数，该函数会添加 "addBy" 到这个函数的参数上并返回
+    Function makeAdder(num addBy) {
+      return (num i) => addBy + i;
+    }
+    void main() {
+      // 创建一个加 2 的函数
+      var add2 = makeAdder(2);
+      
+      var add4 = makeAdder(4);
+      
+      print("add2(3): ${add2(3)}");
+      print("add4(3): ${add4(3)}");
+    }
+```  
 
