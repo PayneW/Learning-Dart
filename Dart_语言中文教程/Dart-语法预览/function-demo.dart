@@ -14,4 +14,13 @@ void main() {
   assert(add2(3) == 5);
   print(add2(3));
   assert(add4(3) == 7);
+
+  var aa;
+  aa ?? 999;
+  print(aa ?? 999);
+  aa ??= 999;
+  print(aa ??= 999);
+  var result = aa ~/ 99;
+  print(result);
+
 }
