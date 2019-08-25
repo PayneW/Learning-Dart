@@ -12,7 +12,7 @@ void main() {
     // 🔺: Dart 中的箭头函数: 方法体只包含一个表达式时，可使用箭头表达式语法进行简写。
     // bool isNoble(int atomicNumber) => _nobleGases[atomicNumber] != null;
 
-    // 因为 Dart 中的箭头表达式值支持单行表达式，所以想 if 声明，这样的条件表达式只能使用
+    // 因为 Dart 中的箭头表达式值支持单行表达式，所以像 if 声明，这样的条件表达式只能使用
     // 匿名函数语法
     List<int> list = [1, 3, 5, 7, 9, 11, 13, 15];
     list.forEach((num) {
